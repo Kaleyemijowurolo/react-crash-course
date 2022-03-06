@@ -6,15 +6,22 @@ export const InputWrapper = styled("div")`
   position: relative;
 
   label {
-    top: -7px;
+    top: -12px;
     left: 11px;
     padding: 2px 5px;
     position: absolute;
     text-transform: capitalize;
-    font-size: ${fontSizes.small};
+    font-size: ${fontSizes.smallBody};
     background-color: ${colors.text.light};
     border-right: 1px solid ${colors.border.dark};
     border-left: 1px solid ${colors.border.dark};
+  }
+
+  .reveal_password{
+    top: 13px;
+    right:10px ;
+    cursor: pointer;
+    position: absolute;
   }
 `;
 
@@ -35,4 +42,5 @@ export const StyledInput = styled("input")`
   &::placeholder {
     color: ${colors.text.sub};
   }
+
 `;

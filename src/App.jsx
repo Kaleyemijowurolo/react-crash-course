@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Dashboard from "./screens/dashboard";
+import SignIn from "./screens/sign-in";
+import SignUp from "./screens/sign-up";
 
 const AppWrapper = styled("div")`
   /* width: 20vw; */
@@ -14,7 +16,8 @@ const AppWrapper = styled("div")`
 const App = () => {
   return (
     <AppWrapper>
-      <Dashboard />
+      <SignUp />
+      {/* <Dashboard /> */}
     </AppWrapper>
   );
 };
