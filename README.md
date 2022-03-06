@@ -17,4 +17,3 @@
 * Footer 
 ## App Description 
 This a demo for a rect crash course
- 
