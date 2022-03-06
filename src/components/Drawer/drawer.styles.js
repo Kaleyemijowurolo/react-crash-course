@@ -5,20 +5,25 @@ import Button from "../Button";
 export const DrawerWrapper = styled("aside")`
   position: relative;
   transition: all 300ms ease-in-out;
-  border: .5px solid ${colors.border.dark};
-  height:${(({height}) => (height? height : '100%'))};
-  width:${(({width, toggleWidth}) => (width? width : toggleWidth? '100%' : ' 100%'))};//dynamically set the with or set 100%, toggleWidth toggles the actual width set on click on the toggleWidth icon
+  border: 0.5px solid ${colors.border.dark};
+  border-top: none;
+  height: ${({ height }) => (height ? height : "100%")};
+  width: ${({ width, toggleWidth }) =>
+    width
+      ? width
+      : toggleWidth
+      ? "100%"
+      : " 100%"}; //dynamically set the with or set 100%, toggleWidth toggles the actual width set on click on the toggleWidth icon
   background-color: ${({ bgColor }) =>
-      bgColor ? bgColor : colors.bg.component};
+    bgColor ? bgColor : colors.bg.component};
   ul {
     display: flex;
     cursor: pointer;
-  overflow: hidden ;
+    overflow: hidden;
     padding: 1rem 0px;
     align-items: center;
     color: ${colors.text.light};
     transition: all 200ms ease-in-out;
-    
 
     &:hover {
       background-color: ${({ hoverBgColor }) =>
@@ -28,25 +33,27 @@ export const DrawerWrapper = styled("aside")`
     }
 
     .icon {
-      display:flex ;
-      padding:5px 0;
+      display: flex;
+      padding: 5px 0;
       font-size: 1.5rem;
-      align-items:center;
-      justify-content:center;
-      width: ${(({toggleWidth})=>(toggleWidth? '100%' : '20%'))};
+      align-items: center;
+      justify-content: center;
+      width: ${({ toggleWidth }) => (toggleWidth ? "100%" : "20%")};
     }
-    li{
-    text-indent: 1rem ; 
-    transition: all 300ms ease-in-out;
-     width:  ${(({toggleWidth})=>(toggleWidth? '0%' : '70%'))}// when toggleWidth is true, set li width to 0% so icon can occupy
-    
+    li {
+      text-indent: 1rem;
+      transition: all 300ms ease-in-out;
+      width: ${({ toggleWidth }) =>
+        toggleWidth
+          ? "0%"
+          : "70%"}; // when toggleWidth is true, set li width to 0% so icon can occupy
     }
   }
 `;
 
 /** Create an absolute Button from the Button component
- * this means the absolute button will have all Button component 
- * props and styles and can add other props and styles*/ 
+ * this means the absolute button will have all Button component
+ * props and styles and can add other props and styles*/
 export const AbsoluteButton = styled(Button)`
   background-color: ${({ bgColor }) =>
     bgColor ? bgColor : colors.bg.darkMode};
@@ -60,8 +67,8 @@ export const AbsoluteButton = styled(Button)`
   top: 50%;
 
   /* style the absolute button icon */
-  svg{
-    font-size: ${fontSizes.title} ;
+  svg {
+    font-size: ${fontSizes.title};
   }
 
   &:hover {

@@ -9,7 +9,6 @@ import {
   BsBoxArrowRight as ArrowRight,
 } from "react-icons/bs";
 
-
 const drawerData = [
   {
     icon: <BsApple />,
@@ -20,7 +19,7 @@ const drawerData = [
     label: "Product",
   },
   {
-    icon: <BsAward/>,
+    icon: <BsAward />,
     label: "Dashboard",
   },
   {
@@ -29,7 +28,7 @@ const drawerData = [
   },
 ];
 
-const Drawer = ({height, width, toggle, setToggle}) => {
+const Drawer = ({ height, width, toggle, setToggle }) => {
   return (
     <DrawerWrapper toggleWidth={toggle} width={width} height={height}>
       {drawerData.map(({ icon, label }) => (
