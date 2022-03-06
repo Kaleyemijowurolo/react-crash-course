@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Footer from "./components/Footer";
+import Drawer from "./components/Drawer";
 
 const AppWrapper = styled("div")`
-  width: 100vw;
+  width: 20vw;
   display: flex;
   border: solid;
   height: 100vh;
@@ -14,7 +14,7 @@ const AppWrapper = styled("div")`
 const App = () => {
   return (
     <AppWrapper>
-      <Footer />
+      <Drawer />
     </AppWrapper>
   );
 };
