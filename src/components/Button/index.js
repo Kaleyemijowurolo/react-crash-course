@@ -1,8 +1,11 @@
 import React from "react";
-import {} from "./button.styles";
+import { ButtonStyle } from "./button.styles";
 
-const Button = () => {
-  return <div>index</div>;
+const Button = ({ primary, text, ...otherProps }) => {
+  return (
+    <ButtonStyle {...otherProps} primary={primary}>
+      {text}
+    </ButtonStyle>
+  );
 };
-
 export default Button;
