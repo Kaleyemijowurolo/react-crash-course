@@ -1,23 +1,37 @@
 import React from "react";
 import { DrawerWrapper, AbsoluteButton } from "./drawer.styles";
 import {
+  BsApp,
+  BsApple,
+  BsAward,
+  BsBadgeAd,
   BsBoxArrowLeft as ArrowLeft,
   BsBoxArrowRight as ArrowRight,
 } from "react-icons/bs";
+
+
 const drawerData = [
   {
-    icon: "icon",
+    icon: <BsApple />,
     label: "Dashboard",
   },
   {
-    icon: "icon",
+    icon: <BsApp />,
+    label: "Product",
+  },
+  {
+    icon: <BsAward/>,
+    label: "Dashboard",
+  },
+  {
+    icon: <BsBadgeAd />,
     label: "Product",
   },
 ];
-const SideBar = () => {
-  const [toggle, setToggle] = React.useState(false);
+
+const Drawer = ({height, width, toggle, setToggle}) => {
   return (
-    <DrawerWrapper>
+    <DrawerWrapper toggleWidth={toggle} width={width} height={height}>
       {drawerData.map(({ icon, label }) => (
         <ul>
           <div className="icon">{icon}</div>
@@ -33,4 +47,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default Drawer;
