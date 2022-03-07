@@ -7,10 +7,10 @@ import { Router, useRoutes } from "react-router-dom";
 
 
 const SignUp = () => {
-  Router= new useRoutes()
+ const  router= new useRoutes()
 	return (
 		<SignUpStyle>
-		<Form onClick={() => Router.push("dashboard")} />  
+		<Form onClick={() => router.push("dashboard")} />  
 		</SignUpStyle>
 	);
 };
