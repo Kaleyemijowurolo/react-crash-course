@@ -7,6 +7,7 @@ import {
   BsBadgeAd,
   BsBoxArrowLeft as ArrowLeft,
   BsBoxArrowRight as ArrowRight,
+  BsCurrencyBitcoin as Bitcoin
 } from "react-icons/bs";
 
 const drawerData = [
@@ -17,6 +18,10 @@ const drawerData = [
   {
     icon: <BsApp />,
     label: "Product",
+  },
+  {
+    icon: <Bitcoin />,
+    label: "Bitcoin",
   },
   {
     icon: <BsAward />,
