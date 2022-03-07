@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, fontSizes, fontWeights, fonts } from "../../lib/theme";
+import { colors, fontSizes, fontWeights } from "../../lib/theme";
 
 export const FormStyle = styled("div")`
   display: flex;
@@ -15,6 +15,7 @@ export const FormStyle = styled("div")`
     align-items: center;
     justify-content: center;
     font-size: ${fontSizes.h4};
+    color: ${colors.bg.darkMode};
     font-weight: ${fontWeights.medium};
   }
 
@@ -77,11 +78,13 @@ export const FormStyle = styled("div")`
 
 export const Card = styled("form")`
   height: ${({ signIn }) => (signIn ? "500px" : "700px")};
-  width: 500px;
+  width: 450px;
+  background-color: #ffffff80;
   box-shadow: 0px 0px 5px lightgray;
   border-radius: ${fontSizes.small};
-  border-top: 8px solid ${colors.border.dark};
+  border-top: 8px solid ${colors.bg.darkMode};
   padding: 0 1rem;
+  /* overflow-y: scroll; */
 
   @media screen and (max-width: 780px) {
     width: 100%;

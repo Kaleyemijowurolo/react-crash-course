@@ -1,15 +1,17 @@
 import styled from "styled-components";
-import { colors, fontSizes, fontWeights } from "../../lib/theme";
+import { colors, fontSizes, fontWeights, fonts } from "../../lib/theme";
 import BG from "../../assets/bg.jpg";
 
-export const SignUpStyle = styled("div")`
+export const SignInStyle = styled("div")`
   display: flex;
   width: 100vw;
   height: 100vh;
   align-items: center;
   justify-content: center;
-  background: url(${BG}) no-repeat center;
+  background-image: url(${BG});
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 
   header {
     height: 20%;
