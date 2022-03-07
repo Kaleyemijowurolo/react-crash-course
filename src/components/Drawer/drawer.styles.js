@@ -3,7 +3,9 @@ import { colors, fontSizes } from "../../lib/theme";
 import Button from "../Button";
 
 export const DrawerWrapper = styled("aside")`
+  display: flex;
   position: relative;
+  flex-direction: column;
   transition: all 300ms ease-in-out;
   border: 0.5px solid ${colors.border.dark};
   border-top: none;
@@ -16,6 +18,18 @@ export const DrawerWrapper = styled("aside")`
       : " 100%"}; //dynamically set the with or set 100%, toggleWidth toggles the actual width set on click on the toggleWidth icon
   background-color: ${({ bgColor }) =>
     bgColor ? bgColor : colors.bg.component};
+
+  .sign_out {
+    flex: 1;
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: flex-end;
+    justify-content: center;
+
+    ul {
+      flex-basis: 100%;
+    }
+  }
   ul {
     display: flex;
     cursor: pointer;
@@ -40,9 +54,11 @@ export const DrawerWrapper = styled("aside")`
       justify-content: center;
       width: ${({ toggleWidth }) => (toggleWidth ? "100%" : "20%")};
     }
+
     li {
       flex: 1;
       text-indent: 1rem;
+      text-transform: capitalize;
       transition: all 300ms ease-in-out;
       display: ${({ toggleWidth }) => (toggleWidth ? "none" : "inline-block")};
     }

@@ -3,6 +3,7 @@ import { borderRadius, colors, fontSizes, indent } from "../../lib/theme";
 
 export const InputWrapper = styled("div")`
   width: 100%;
+  background-color: inherit;
   position: relative;
 
   label {
@@ -34,8 +35,9 @@ export const InputWrapper = styled("div")`
 export const StyledInput = styled("input")`
   text-indent: ${indent.md};
   color: ${colors.border.dark};
+  background-color: inherit;
   border-radius: ${borderRadius.md};
-  border-color: ${colors.border.dark};
+  border-color: ${colors.bg.darkMode};
   width: ${({ width }) => (width ? width : "100%")};
   height: ${({ height }) => (height ? height : "40px;")};
 
