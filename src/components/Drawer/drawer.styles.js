@@ -41,12 +41,28 @@ export const DrawerWrapper = styled("aside")`
       width: ${({ toggleWidth }) => (toggleWidth ? "100%" : "20%")};
     }
     li {
+      flex: 1;
       text-indent: 1rem;
       transition: all 300ms ease-in-out;
-      width: ${({ toggleWidth }) =>
-        toggleWidth
-          ? "0%"
-          : "70%"}; // when toggleWidth is true, set li width to 0% so icon can occupy
+      display: ${({ toggleWidth }) => (toggleWidth ? "none" : "inline-block")};
+    }
+  }
+
+  .active {
+    background-color: ${colors.btn.primary};
+    border-left: 2.5px solid ${colors.btn.light};
+  }
+
+  @media screen and (max-width: 780px) {
+    ul {
+      .icon {
+        width: 100%;
+        font-size: 2rem;
+        padding: 0 0.5rem;
+      }
+      li {
+        display: none;
+      }
     }
   }
 `;
@@ -57,22 +73,31 @@ export const DrawerWrapper = styled("aside")`
 export const AbsoluteButton = styled(Button)`
   background-color: ${({ bgColor }) =>
     bgColor ? bgColor : colors.bg.darkMode};
-  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  right: -1.5rem;
-  border: none;
-  height: 50px;
-  width: 50px;
+  border: solid ${colors.border.light};
+  border-radius: 50%;
+  right: -1rem;
+  /* border: none; */
+  display: flex;
+  height: 30px;
+  width: 30px;
   padding: 0;
   top: 50%;
 
   /* style the absolute button icon */
   svg {
-    font-size: ${fontSizes.title};
+    font-size: ${fontSizes.smallBody};
   }
 
   &:hover {
     opacity: 1;
     border: solid ${colors.border.dark};
+  }
+
+  /* hide the absolute button on small screen */
+  @media screen and (max-width: 780px) {
+    display: none;
   }
 `;

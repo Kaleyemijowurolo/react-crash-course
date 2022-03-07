@@ -20,7 +20,8 @@ export const DashboardWrapper = styled("div")`
     justify-content: space-between;
 
     aside {
-      flex: ${({ toggle }) => (toggle ? "0.3" : "1.5")};
+      transition: all 300ms ease-in-out;
+      flex: ${({ toggle }) => (toggle ? "0.3" : "1.2")};
       height: 100%;
     }
 
@@ -34,5 +35,12 @@ export const DashboardWrapper = styled("div")`
 
   footer {
     height: 2%;
+  }
+
+  @media screen and (max-width: 780px) {
+    aside {
+      flex: 1;
+      border: solid green;
+    }
   }
 `;

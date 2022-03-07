@@ -1,7 +1,8 @@
 import React from "react";
-import { DashboardWrapper } from "./dashboard.styles";
 import Drawer from "../../components/Drawer";
-import DashboardHeader from "../../components/main-header";
+import { DashboardWrapper } from "./dashboard.styles";
+import DashboardHeader from "../../components/Header";
+
 const Dashboard = ({ children }) => {
   const [toggle, setToggle] = React.useState(false);
 
@@ -12,7 +13,7 @@ const Dashboard = ({ children }) => {
       </header>
 
       <main>
-        <aside>
+        <aside id="aside">
           <Drawer toggle={toggle} setToggle={setToggle} />
         </aside>
         <section>{children}</section>

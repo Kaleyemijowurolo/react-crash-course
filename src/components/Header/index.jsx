@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import { MainHeaderWrapper } from "./main-header.styles";
+import { MainHeaderWrapper } from "./header.styles";
 import {
   IoIosNotificationsOutline,
   IoIosSearch,
   IoIosMenu,
 } from "react-icons/io";
+import { BsApple } from "react-icons/bs";
+// import Data from "../../data.json";
 
-const MainHeader = () => {
-  const [userData, setUserData] = useState({});
+const DashboardHeader = () => {
+  // const [userData, setUserData] = useState({});
 
   // React.useEffect(() => {
-  //   fetch("Data.json")
+  //   fetch("../../data.json")
   //     .then((response) => response.json())
   //     .then((response) => {
   //       console.log(response.user, "response");
@@ -19,7 +21,11 @@ const MainHeader = () => {
   // }, []);
   return (
     <MainHeaderWrapper>
-      <div className="header_logo">{"Sudo"}</div>
+      <div className="header_logo">
+        {" "}
+        <BsApple />
+        {"Sudo"}
+      </div>
       <div className="header_search">
         <div className="input_wrapper">
           <IoIosSearch />
@@ -34,16 +40,12 @@ const MainHeader = () => {
       </div>
       <div className="header_user">
         <div className="user_image">
-          {/* <img
-            src={"/assets/kk.jpg"}
-            alt="logo"
-           
-          /> */}
+          <img src={"/assets/kk.jpg"} alt="logo" />
         </div>
-        {/* <div className="user_name">{userData.name}</div> */}
+        <div className="user_name">{"Kayode"}</div>
       </div>
     </MainHeaderWrapper>
   );
 };
 
-export default MainHeader;
+export default DashboardHeader;
