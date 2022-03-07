@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors, fontSizes, fontWeights, fonts } from "../../lib/theme";
 
-export const SignUpStyle = styled("div")`
+export const SignInStyle = styled("div")`
 	display: flex;
 	width: 100vw;
 	height: 100vh;
