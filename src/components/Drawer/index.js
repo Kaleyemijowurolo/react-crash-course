@@ -32,12 +32,13 @@ const Drawer = ({ height, width, toggle, setToggle }) => {
   return (
     <DrawerWrapper toggleWidth={toggle} width={width} height={height}>
       {drawerData.map(({ icon, label }) => (
-        <ul>
+        <ul title={label}>
           <div className="icon">{icon}</div>
           <li>{label}</li>
         </ul>
       ))}
       <AbsoluteButton
+        title={toggle ? "Open" : "Close"}
         text={toggle ? <ArrowRight /> : <ArrowLeft />}
         onClick={() => setToggle(!toggle)}
         primary

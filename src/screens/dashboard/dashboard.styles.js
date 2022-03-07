@@ -20,7 +20,8 @@ export const DashboardWrapper = styled("div")`
     justify-content: space-between;
 
     aside {
-      flex: ${({ toggle }) => (toggle ? "0.3" : "1.5")};
+      transition: all 300ms ease-in-out;
+      flex: ${({ toggle }) => (toggle ? "0.3" : "1.2")};
       height: 100%;
     }
 
