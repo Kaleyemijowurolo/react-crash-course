@@ -5,6 +5,7 @@ import {
   IoIosSearch,
   IoIosMenu,
 } from "react-icons/io";
+import { BsApple } from "react-icons/bs";
 // import Data from "../../data.json";
 
 const DashboardHeader = () => {
@@ -20,7 +21,11 @@ const DashboardHeader = () => {
   // }, []);
   return (
     <MainHeaderWrapper>
-      <div className="header_logo">{"Sudo"}</div>
+      <div className="header_logo">
+        {" "}
+        <BsApple />
+        {"Sudo"}
+      </div>
       <div className="header_search">
         <div className="input_wrapper">
           <IoIosSearch />

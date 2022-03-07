@@ -17,11 +17,17 @@ export const InputWrapper = styled("div")`
     border-left: 1px solid ${colors.border.dark};
   }
 
-  .reveal_password{
-    top: 13px;
-    right:10px ;
+  .reveal_password {
+    top: 5px;
+    right: 5px;
     cursor: pointer;
     position: absolute;
+    padding: 10px;
+    display: flex;
+    border-radius: 50%;
+    &:hover {
+      background-color: ${colors.text.sub};
+    }
   }
 `;
 
@@ -42,5 +48,4 @@ export const StyledInput = styled("input")`
   &::placeholder {
     color: ${colors.text.sub};
   }
-
 `;

@@ -47,6 +47,24 @@ export const DrawerWrapper = styled("aside")`
       display: ${({ toggleWidth }) => (toggleWidth ? "none" : "inline-block")};
     }
   }
+
+  .active {
+    background-color: ${colors.btn.primary};
+    border-left: 2.5px solid ${colors.btn.light};
+  }
+
+  @media screen and (max-width: 780px) {
+    ul {
+      .icon {
+        width: 100%;
+        font-size: 2rem;
+        padding: 0 0.5rem;
+      }
+      li {
+        display: none;
+      }
+    }
+  }
 `;
 
 /** Create an absolute Button from the Button component
@@ -76,5 +94,10 @@ export const AbsoluteButton = styled(Button)`
   &:hover {
     opacity: 1;
     border: solid ${colors.border.dark};
+  }
+
+  /* hide the absolute button on small screen */
+  @media screen and (max-width: 780px) {
+    display: none;
   }
 `;

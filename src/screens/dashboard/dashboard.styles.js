@@ -36,4 +36,11 @@ export const DashboardWrapper = styled("div")`
   footer {
     height: 2%;
   }
+
+  @media screen and (max-width: 780px) {
+    aside {
+      flex: 1;
+      border: solid green;
+    }
+  }
 `;
