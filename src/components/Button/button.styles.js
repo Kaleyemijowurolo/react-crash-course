@@ -8,6 +8,7 @@ export const ButtonStyle = styled("button")`
   border-radius: ${borderRadius.sm};
   transition: all 200ms ease-in-out;
   font-size: ${fontSizes.buttonText};
+  border-radius:${borderRadius.md} ;
   border: ${`.5px solid ${colors.bg.darkMode}`};
   background-color: ${({ primary }) =>
     primary ? colors.bg.darkMode : "transparent"};

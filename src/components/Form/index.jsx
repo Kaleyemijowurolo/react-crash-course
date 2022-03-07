@@ -68,16 +68,16 @@ const Form = ({ signIn, signUp, onClick }) => {
 					)}
 				</main>
 
-				<footer>
 					<Link to={"/sign-in"}>
+				<footer>
 						<Button
 							onClick={onClick}
 							style={{ width: "100%" }}
 							primary
 							text={signIn ? "Sign In" : "Create Account"}
 						/>
+				</footer> 	
 					</Link>
-				</footer>
 				<div style={{ float: "right" }}>
 					{signIn ? (
 						<>

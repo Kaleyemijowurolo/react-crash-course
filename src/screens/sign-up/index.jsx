@@ -3,14 +3,14 @@ import Input from "../../components/Input";
 import Button from "../../components/Button";
 import { SignUpStyle, Card } from "./signUp.styles";
 import Form from "../../components/Form";
-import { Router, useRoutes } from "react-router-dom";
+// import { Router, useRoutes } from "react-router-dom";
 
 
 const SignUp = () => {
- const  router= new useRoutes()
+//  const  router= new useRoutes()
 	return (
 		<SignUpStyle>
-		<Form onClick={() => router.push("dashboard")} />  
+		<Form />  
 		</SignUpStyle>
 	);
 };

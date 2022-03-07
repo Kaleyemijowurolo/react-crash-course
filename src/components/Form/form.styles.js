@@ -9,7 +9,7 @@ export const FormStyle = styled("div")`
 	justify-content: center;
 
 	header {
-		height: 20%;
+		height: 15%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
